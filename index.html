@@ -252,17 +252,25 @@
 				</section>
 
 				<section>
-					<h2>Let's do this!!!</h2>
-
-					<p class="fragment">(Erm... demo starts now...)</p>
+					<!-- LET'S DO THIS!!! -->
+					<img src="images/lets_do_this.jpg" />
 
 				</section>
 
+				<section>
+					<h2>That looked important.  What was it?</h2>
+
+					<ul>
+						<li class="fragment">That was <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>, the HyperText Transfer Protocol.</li>
+						<li class="fragment">It allows clients to request resources from servers.</li>
+					</ul>
+				</section>
 
 				<section>
-					<h2>HTTP Request</h2>
+					<section>
+						<h2>HTTP Request</h2>
 
-					<pre><code>GET / HTTP/1.1
+						<pre><code>GET / HTTP/1.1
 Host: www.amazon.com
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -270,6 +278,30 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Cookie: x-wl-uid=19hjJTOfKZ8ZX3plg0k6rLXNc+QO1ja5YDdgSm0w/iT7KqBTfq3u+9wnG3zB9J9Anj0tx/ehgoAg=; session-id-time=2082787201l; session-id=188-4865042-5922907; s_nr=1378666121578-New; s_vnum=1810665824270%26vn%3D1; s_dslv=1378666121581; ubid-main=181-7824637-2863522; session-token=Wwj/RQ58DUMxlaq+Nsb0NvL8DlbuFfnTlHY1LpfSr5eVNJViv/yaGzVxcVrIqyJRstcvdqNQQDmyiqEoJUuQw5KVrCBZBNNsDs6V0Gt+00Hrpeqhr7xCz7w+zbKH/tD9J6y1d7F80F3Gc4S6tz+jfb0ylIu5Ubi+2MbOCiV1ZURlvMpVr5gV6pag0jfgTWyqy/137EgdJiJfHC91uDf/wZM8XmGhl6G2p1yYuRDANNl6/K3Xay+jli243loFA7b5
 Connection: keep-alive</code></pre>
+
+					</section>
+
+					<section>
+						<h3>Notice that the client is:</h3>
+
+						<ul>
+							<li>Using the HTTP/1.1 protocol.</li>
+							<li>Contacting www.amazon.com.</li>
+							<li><em>GET</em>ting the "/" resource.</li>
+							<li>Providing cookies to the server.</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h3>What's a cookie?</h3>
+
+						<ul>
+							<li>Cookies are a way of tracking state across multiple requests.</li>
+							<li>Servers instruct the browser to save cookies.</li>
+							<li>Browsers show the cookies to the server on each request.</li>
+						</ul>
+					</section>
 
 				</section>
 
