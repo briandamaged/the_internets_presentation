@@ -307,9 +307,10 @@ Connection: keep-alive</code></pre>
 
 
 				<section>
-					<h3>HTTP Response</h3>
+					<section>
+						<h3>HTTP Response</h3>
 
-					<pre><code>HTTP/1.1 200 OK
+						<pre><code>HTTP/1.1 200 OK
 Date: Sun, 03 Aug 2014 19:24:29 GMT
 Server: Server
 Set-Cookie: skin=noskin; path=/; domain=.amazon.com
@@ -326,6 +327,36 @@ Content-Length: 249071
    "http://www.w3.org/TR/html4/loose.dtd"&gt;
 &lt;html&gt;
 &lt;head&gt;</code></pre>
+					</section>
+
+					<section>
+						<h3>Notice that the server is:</h3>
+
+						<ul>
+							<li>Reponding with the HTTP/1.1 protocol.</li>
+							<li>Indicating that the client's request was successful (200 OK).</li>
+							<li>Instructing the client to set some cookies.</li>
+							<li>Sending content that is 249071 bytes in length.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>How do I decipher HTTP response codes?</h3>
+
+						<ul>
+							<li>Specific HTTP response codes are documented <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">here</a>.</li>
+							<li>More generally, responses are categorized as follows:</li>
+							<ul>
+								<li>1xx: Information</li>
+								<li>2xx: Success</li>
+								<li>3xx: Redirection</li>
+								<li>4xx: Client Error</li>
+								<li>5xx: Server Error</li>
+							</ul>
+						</ul>
+
+					</section>
+
 				</section>
 
 
