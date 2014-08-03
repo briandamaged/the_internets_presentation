@@ -177,17 +177,24 @@
 
 
 				<section>
-					<h2>How do we get the network address?</h2>
+					<section>
+						<h2>How do we get the network address?</h2>
 
-					<div class="info-box">
-						176.32.98.166
-					</div>
+						<div class="info-box">
+							176.32.98.166
+						</div>
 
-					<ul>
-						<li class="fragment">Via the DNS protocol.</li>
-						<li class="fragment">DNS stands for "Domain Name System".</li>
-						<li class="fragment">It produces a list of <em>network addresses</em> that are associated with a <em>domain name</em>.</li>
-					</ul>
+						<ul>
+							<li class="fragment">Via the DNS protocol.</li>
+							<li class="fragment">DNS stands for "Domain Name System".</li>
+							<li class="fragment">It produces a list of <em>network addresses</em> that are associated with a <em>domain name</em>.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>You can query DNS via the 'dig' command!</h3>
+						<img src="images/dig.png" />
+					</section>
 				</section>
 
 
@@ -215,14 +222,27 @@
 				</section>
 
 				<section>
-					<h2>Okay.  So what?</h2>
+					<section>
+						<h2>Okay.  So what?</h2>
 
-					<ul>
-						<li class="fragment">Well...</li>
-						<li class="fragment">The data passes through many servers during its journey.</li>
-						<li class="fragment">Let's add a <a target="_blank" href="http://portswigger.net/burp/proxy.html">proxy server</a> to this path.</li>
-						<li class="fragment">This will allow us to intercept and observe the data.</li>
-					</ul>
+						<ul>
+							<li class="fragment">Well...</li>
+							<li class="fragment">The data passes through many servers during its journey.</li>
+							<li class="fragment">Let's add a <a target="_blank" href="http://portswigger.net/burp/proxy.html">proxy server</a> to this path.</li>
+							<li class="fragment">This will allow us to intercept and observe the data.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Here are some freely available proxy servers</h3>
+
+						<ul>
+							<li><a href="http://portswigger.net/burp/proxy.html">Burp Proxy</a></li>
+							<li><a href="https://addons.mozilla.org/en-US/firefox/addon/tamper-data/">Tamper Data</a></li>
+							<li><a href="http://getfirebug.com/">Firebug</a></li>
+							<li><a href="https://developer.chrome.com/devtools/index">Chrome Developer Tools</a></li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
