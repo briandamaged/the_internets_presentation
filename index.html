@@ -519,9 +519,35 @@ Content-Length: 249071
 				</section>
 
 
+				<section>
+					<h2>So... where do we begin?</h2>
+
+
+						<p class="fragment" >
+							Let's start with an HTTP request for a page:
+						</p>
+
+						<div class="info-box fragment" >
+							<a href="http://localhost:3000/name_game/sing?name=Dave">
+								http://localhost:3000/name_game/sing?name=Dave
+							</a>
+						</div>
+
+
+						<p class="fragment" >
+							The application will evaluate its <em>routing rules</em>
+							to determine which <em>controller action</em> should evaluate
+							the request.
+						</p>
+
+				</section>
+
+
+
+
 
 				<section>
-					<h2>The Route Definitions</h2>
+					<h2>The Routing Rules</h2>
 
 					<p>File: <code>/config/routes.rb</code></p>
 
@@ -536,6 +562,21 @@ Content-Length: 249071
   get 'name_game/sing', to: "name_game#sing"
 
 end</code></pre>
+				</section>
+
+				<section>
+					<h2>According to these rules...</h2>
+
+					<ul>
+						<li class="fragment" >Our URL path matches: <code>/name_game/sing</code></li>
+						<li class="fragment">This maps to the action: <code>name_game#sing</code></li>
+						<li class="fragment">So, our request will be handled by:
+							<ul>
+								<li>Class: NameGameController</li>
+								<li>Method: sing</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 
 
@@ -564,6 +605,25 @@ end</code></pre>
 end
 
 					</code></pre>
+				</section>
+
+
+				<section>
+					<h2>Eek!  Code!</h2>
+
+					<ul>
+						<li class="fragment" >Don't worry -- it's safely behind your screen!</li>
+						<li class="fragment" >This code reads the <code>:name</code> query parameter.</li>
+						<li class="fragment" >From this, it derives the following <em>output data</em>:
+							<ul>
+								<li>@name</li>
+								<li>@b_name</li>
+								<li>@f_name</li>
+								<li>@m_name</li>
+							</ul>
+						</li>
+						<li class="fragment" >This <em>output data</em> is then forwarded to the <em>view template</em></li>
+					</ul>
 				</section>
 
 
