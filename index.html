@@ -477,6 +477,77 @@ Content-Length: 249071
 
 
 				<section>
+					<h2>The Route Definitions</h2>
+
+					<p>File: <code>/config/routes.rb</code></p>
+
+					<pre><code>Rails.application.routes.draw do
+
+  # When the client requests the "/" URL,
+  # redirect them to "/name_game/ask"
+  root to: redirect('name_game/ask')
+
+  # These URL's map "to" specific controller actions.
+  get 'name_game/ask',  to: "name_game#ask"
+  get 'name_game/sing', to: "name_game#sing"
+
+end</code></pre>
+				</section>
+
+
+				<section>
+					<h2>The Controller</h2>
+
+					<p>File: <code>/app/controllers/name_game_controller.rb</code></p>
+
+					<pre><code>class NameGameController &lt; ApplicationController
+  def ask
+  end
+
+  def sing
+    @name = params[:name].capitalize
+
+    if @name.empty?
+      flash[:error] = "Come on -- don't be shy!  What's your name?"
+      redirect_to("/name_game/ask")
+    else
+      name_ending = @name[1..-1]
+      @b_name = "B" + name_ending
+      @f_name = "F" + name_ending
+      @m_name = "M" + name_ending
+    end
+  end
+end
+
+					</code></pre>
+				</section>
+
+
+				<section>
+					<h2>The View Template</h2>
+
+					<p>File: <code>/app/views/name_game/sing.html.erb</code></p>
+
+					<pre><code>&lt;h1&gt;&lt;%= @name %&gt;, huh?&lt;/h1&gt;
+
+&lt;section class=&quot;singing&quot; &gt;
+  &lt;p&gt;&lt;%= @name %&gt;, &lt;%= @name %&gt;, bo-&lt;%= @b_name %&gt;&lt;/p&gt;
+  &lt;p&gt;Banana-fana fo-&lt;%= @f_name %&gt;&lt;/p&gt;
+  &lt;p&gt;Mee-mi-mo-&lt;%= @m_name %&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;%= @name %&gt;!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;p&gt;
+  I &lt;em&gt;love&lt;/em&gt; this game!
+  Wanna &lt;%= link_to &quot;play again&quot;, &quot;/name_game/ask&quot; %&gt;?
+&lt;/p&gt;
+					</code></pre>
+				</section>
+
+
+
+
+				<section>
 					<h1>THE END</h1>
 
 					<p>
